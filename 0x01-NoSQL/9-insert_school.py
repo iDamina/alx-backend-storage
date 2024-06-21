@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""A Python function that lists all documents in a collection:
+"""A module to lists all documents in a collection:
 
     Prototype: def list_all(mongo_collection):
     Return an empty list if no document in the collection
