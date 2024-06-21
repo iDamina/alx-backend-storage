@@ -1,18 +1,16 @@
 #!/usr/bin/env python3
-"""A module to lists all documents in a collection:
+"""Write a Python function that inserts a new document
+    in a collection based on kwargs:
 
-    Prototype: def list_all(mongo_collection):
-    Return an empty list if no document in the collection
+    Prototype: def insert_school(mongo_collection, **kwargs):
     mongo_collection will be the pymongo collection object
-"""
+    Returns the new _id
+    """
 
 
 import pymongo
 
 
-def list_all(mongo_collection):
-    """Return list of all docs in collection"""
-    if not mongo_collection:
-        return []
-    docs = mongo_collection.find()
-    return [doc for doc in docs]
+def insert_school(mongo_collection, **kwargs):
+    """inserts a new document in a collection"""
+    return mongo_collection.insert(kwargs)
